@@ -1,6 +1,8 @@
-const checkEnvVariables = require("./check-env-variables")
+// Import the checkEnvVariables module
+const checkEnvVariables = require("./check-env-variables");
 
-checkEnvVariables()
+// Run the function to check environment variables
+checkEnvVariables();
 
 /**
  * @type {import('next').NextConfig}
@@ -9,6 +11,14 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'res.cloudinary.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
       {
         protocol: "http",
         hostname: "localhost",
@@ -29,10 +39,16 @@ const nextConfig = {
         protocol: "https",
         hostname: "medusa-server-testing.s3.us-east-1.amazonaws.com",
       },
-      ...(process.env.NEXT_PUBLIC_MINIO_ENDPOINT ? [{
+      {
         protocol: "https",
-        hostname: process.env.NEXT_PUBLIC_MINIO_ENDPOINT,
-      }] : []),
+        hostname: "seasky2004.s3.ap-south-1.amazonaws.com", // Add this line
+      },
+      ...(process.env.NEXT_PUBLIC_MINIO_ENDPOINT ? [
+        {
+          protocol: "https",
+          hostname: process.env.NEXT_PUBLIC_MINIO_ENDPOINT,
+        },
+      ] : []),
     ],
   },
   serverRuntimeConfig: {
@@ -40,4 +56,4 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
