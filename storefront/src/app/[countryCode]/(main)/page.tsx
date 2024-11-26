@@ -4,6 +4,9 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { getCollectionsWithProducts } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
+//feature produc women section 
+
+ 
 
 //edited: : working with carousel. 
 import Carousel from "@modules/layout/components/Carousel/Carousel";
@@ -21,9 +24,6 @@ export const metadata: Metadata = {
 
 //edite server related issue : 
 
- 
-
-
 export default async function Home({
   params: { countryCode },
 }: {
@@ -35,6 +35,9 @@ export default async function Home({
   if (!collections || !region) {
     return null
   }
+
+ 
+
 
 //edited : 
 
@@ -88,8 +91,7 @@ const slides = [
 
   return (
     <>
-    <Carousel auto interval={5000} />
-    {/**   <Hero />    */}
+    <Carousel auto interval={5000} /> 
 
     <div className="px-[10px]">
           <CategorySlick slides={slides} />
@@ -101,6 +103,8 @@ const slides = [
           <FeaturedProducts collections={collections} region={region} />
         </ul>
       </div>
+      <>  <Hero />     </>
+       
 
     </>
   )

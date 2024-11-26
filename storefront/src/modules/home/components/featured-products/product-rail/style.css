@@ -1,0 +1,21 @@
+/* featured-products-wrapper styles */
+.featured-products-wrapper {
+    width: 100vw;
+    height: 100vh; /* Full height for desktop */
+    background-position: center;
+    background-size: cover; /* Keep cover for desktop */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .featured-products-wrapper {
+        height: auto; /* Let height adjust dynamically */
+        background-size: contain; /* Show the full image */
+        background-position: top; /* Align the image from the top */
+    }
+}
