@@ -1,0 +1,115 @@
+/* Importing the Bleu Marine font */
+@import url('https://fonts.googleapis.com/css2?family=Bleu+Marine:wght@400;700&display=swap');
+
+/* Ensure carousel list and track take full height */
+.react-multi-carousel-list {
+    height: 100%;
+    padding-top: 0; /* Remove top padding for better alignment */
+}
+
+.react-multi-carousel-track {
+    height: 100%;
+}
+
+/* Container for the slide item */
+.react-multi-carousel-item {
+    padding: 5px; /* Reduced padding for better responsiveness */
+    position: relative; /* Ensure the text can be positioned absolutely */
+}
+
+/* Style for slide images */
+.slide_image {
+    position: relative;
+    overflow: hidden; /* Prevents zoom effect from causing overflow */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+/* Image styling with zoom effect */
+.slide_image img {
+    width: 100%; /* Ensure image covers container */
+    height: 100%; /* Ensure image covers container */
+    object-fit: cover; /* Maintain aspect ratio while covering the area */
+    transition: transform 0.3s ease; /* Smoother zoom effect */
+}
+
+.slide_image:hover img {
+    transform: scale(1.1); /* Zoom in effect */
+}
+
+/* Keep the caption visible at all times */
+.caption_ {
+    position: absolute; /* Position it over the image */
+    bottom: 0; /* Position at the bottom of the image */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    padding: 10px;
+    background: transparent; /* No background initially */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+    z-index: 2; /* Ensure it stays above the zoomed image */
+    opacity: 1; /* Always visible */
+}
+
+/* Change background and text color on hover */
+.slide_image:hover .caption_ {
+    background-color: rgba(64, 64, 64, 0.8); /* Dark gray background on hover */
+}
+
+.slide_image:hover .caption_ p {
+    color: #fff; /* White text color on hover */
+}
+
+/* Styling for caption text with Bleu Marine font */
+.caption_ p {
+    font-family: 'Bleu Marine', sans-serif; /* Apply the Bleu Marine font */
+    font-size: 24px; /* Adjusted font size for responsiveness */
+    font-weight: bold; /* Make text bold */
+    color: #fff; /* White text initially */
+    margin: 0;
+    letter-spacing: 1px;
+    text-align: center; /* Center text for better readability */
+}
+
+/* Arrow styling for the carousel */
+.react-multiple-carousel__arrow {
+    background-color: rgba(0, 0, 0, 0.459);
+    width: 40px; /* Adjusted size for better visibility */
+    height: 70px; /* Adjusted size for better visibility */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Arrow hover effect */
+.react-multiple-carousel__arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.react-multiple-carousel__arrow--right {
+    right: 3%;
+}
+
+.react-multiple-carousel__arrow--left {
+    left: 3%;
+}
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    .react-multiple-carousel__arrow {
+        width: 30px; /* Smaller arrows on tablets */
+        height: 60px; /* Smaller arrows on tablets */
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .react-multiple-carousel__arrow {
+        width: 20px; /* Even smaller arrows on phones */
+        height: 50px; /* Even smaller arrows on phones */
+    }
+
+    .caption_ p {
+        font-size: 20px; /* Further adjust font size for smaller screens */
+    }
+}

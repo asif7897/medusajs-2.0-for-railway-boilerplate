@@ -5,6 +5,10 @@ import Hero from "@modules/home/components/hero"
 import { getCollectionsWithProducts } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 
+//edited: md asif mahmud : working with carousel. 
+import Carousel from "@modules/layout/components/Carousel/Carousel";
+
+
 export const metadata: Metadata = {
   title: "Medusa Next.js Starter Template",
   description:
@@ -25,6 +29,7 @@ export default async function Home({
 
   return (
     <>
+    <Carousel auto interval={5000} />
       <Hero />
       <div className="py-12">
         <ul className="flex flex-col gap-x-6">
