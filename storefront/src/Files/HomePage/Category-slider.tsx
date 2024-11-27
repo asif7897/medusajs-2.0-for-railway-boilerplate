@@ -30,27 +30,27 @@ const CategorySlick: React.FC<CategorySlickProps> = () => {
         {
             image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103867/1_upp5wt.webp",
             name: "PREMIUM SUIT",
-            value: "premium_suit"
+            value: "premiumSuit"
         },
         {
             image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103868/2_tgc9dd.webp",
             name: "PLATINUM BLAZER",
-            value: "platinum_blazer"
+            value: "platinumBlazer"
         },
         {
             image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103868/3_pm63rk.webp",
             name: "FORMAL SHIRT",
-            value: "formal_shirt"
+            value: "formalShirt"
         },
         {
             image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103931/4_diugva.webp",
             name: "FORMAL PANT",
-            value: "formal_pant"
+            value: "formalPant"
         },
         {
             image: "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732103866/5_yt01ic.webp",
             name: "HALF COAT",
-            value: "half_coat"
+            value: "halfCoat"
         },
     ];
     

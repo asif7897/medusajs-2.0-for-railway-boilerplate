@@ -49,12 +49,12 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
 
         //new add 3 aug 2024  
 
-        { "name": "Premium Suit", "handle": "premium_suit" },
-        { "name": "Platinum Blazer", "handle": "platinum_blazer" },
-        { "name": "Formal Shirt", "handle": "formal_shirt" },
+        { "name": "Premium Suit", "handle": "premiumSuit" },
+        { "name": "Platinum Blazer", "handle": "platinumBlazer" },
+        { "name": "Formal Shirt", "handle": "formalShirt" },
        // { "name": "Elite Panjabi", "handle": "elite_panjabi" },
-        { "name": "Half Coat", "handle": "half_coat" },
-        { "name": "Formal Pant", "handle": "pants" } //formal pants ok .. 
+        { "name": "Half Coat", "handle": "halfCoat" },
+        { "name": "Formal Pant", "handle": "formalPant" } //formal pants ok .. 
 
 
 
@@ -66,15 +66,15 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
       "sub_categories": [
        // { "name": "Blazer", "handle": "blazer_w" },
       //  { "name": "Single Blazer", "handle": "s_blazer_w" },
-        { "name": "Women's-suit", "handle": "women's_suit" }
+        { "name": "Women's-suit", "handle": "womenSuit" }
       ],
       image: ["https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwomen-1.dc76cb6f.jpg&w=384&q=75", "https://medusajs-frontend-production-28be.up.railway.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwomen-2.031fff47.jpg&w=384&q=75"]
     },
     {
       "main_category": "Accessory",
       "sub_categories": [
-        { "name": "Box-tie", "handle": "box_tie" },
-        { "name": "Luxury-belt", "handle": "luxury_belt" },
+        { "name": "Box-tie", "handle": "boxTie" },
+        { "name": "Luxury-belt", "handle": "luxuryBelt" },
         //3 aug 
       //  { "name": "Tie-pin", "handle": "tie_pin" }
       ],

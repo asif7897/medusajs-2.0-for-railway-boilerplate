@@ -6,7 +6,7 @@ import { getCollectionsWithProducts } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 //feature produc women section 
 
- 
+ //error /Bug : comes from this file 
 
 //edited: : working with carousel. 
 import Carousel from "@modules/layout/components/Carousel/Carousel";
@@ -117,7 +117,7 @@ const slides = [
 
         <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row justify-between items-start h-[80vh] md:h-[70vh]">
           <a
-            href="/collections/luxury_belt"
+            href="/collections/luxuryBelt"
             className="w-full md:w-[calc(50%-8px)] h-full relative flex items-center justify-center overflow-hidden rounded-lg bg-gray-700 group"
             style={{ backgroundImage: 'url("https://res.cloudinary.com/dvzdodv1r/image/upload/v1732106124/Belt_Banner_a8aca7.webp")' }}
           >
@@ -152,7 +152,7 @@ const slides = [
           </a>
 
           <a
-            href="/collections/box_tie"
+            href="/collections/boxTie"
             className="w-full md:w-[calc(50%-8px)] h-full relative flex items-center justify-center overflow-hidden rounded-lg bg-gray-700 group"
             style={{ backgroundImage: 'url("https://res.cloudinary.com/dvzdodv1r/image/upload/v1732106446/Tie_web_banner_2_1_q1huo5.webp")' }}
           >
@@ -204,7 +204,7 @@ const slides = [
       <h3 className="text-lg md:text-xl font-semibold mb-2 text-right text-gray-300">Get the Perfect Gift</h3>
       <p className="text-base mb-4 text-right text-gray-300">Our gift cards are perfect for any occasion.</p>
       <a
-        href="/collections/gift_card"
+        href="/collections/giftCard"
         className="bg-white text-gray-800 py-2 px-4 rounded-lg text-right hover:bg-gray-300 hover:shadow-lg transition-colors duration-300"
       >
         Buy Now

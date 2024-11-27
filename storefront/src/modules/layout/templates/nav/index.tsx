@@ -25,27 +25,27 @@ export default async function Nav() {
     {
       "main_category": "Men",
       "sub_categories": [
-        { "name": "Premium Suit", "handle": "premium_suit" },
-        { "name": "Platinum Blazer", "handle": "platinum_blazer" },
-        { "name": "Formal Shirt", "handle": "formal_shirt" },
+        { "name": "Premium Suit", "handle": "premiumSuit" },
+        { "name": "Platinum Blazer", "handle": "platinumBlazer" },
+        { "name": "Formal Shirt", "handle": "formalShirt" },
       //  { "name": "Elite Panjabi", "handle": "elite_panjabi" },
-        { "name": "Half Coat", "handle": "half_coat" },
-        { "name": "Formal Pant", "handle": "formal_pant" }
+        { "name": "Half Coat", "handle": "halfCoat" },
+        { "name": "Formal Pant", "handle": "formalPant" }
       ],
       image: [imageUrls.st1366, imageUrls.nf2535]
     },
     {
       "main_category": "Women",
       "sub_categories": [
-        { "name": "Women's-suit", "handle": "women's_suit" }
+        { "name": "Women's-suit", "handle": "womenSuit" }
       ],
       image: [imageUrls.women1, imageUrls.women2]
     },
     {
       "main_category": "Accessory",
       "sub_categories": [
-        { "name": "Luxury-belt", "handle": "luxury_belt" },
-        { "name": "Box-tie", "handle": "box_tie" }
+        { "name": "Luxury-belt", "handle": "luxuryBelt" },
+        { "name": "Box-tie", "handle": "boxTie" }
        
       ],
       image: [imageUrls.acce1, imageUrls.acce2]
