@@ -1,43 +1,39 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@medusajs/types";
+import { Text } from "@medusajs/ui";
+import InteractiveLink from "@modules/common/components/interactive-link";
+import ProductPreview from "@modules/products/components/product-preview";
 
-
-
-
-import { Text } from "@medusajs/ui"
-
-import InteractiveLink from "@modules/common/components/interactive-link"
-import ProductPreview from "@modules/products/components/product-preview"
+export async function getServerSideProps(context: { params: { collectionHandle: string } }) {
+  const { collectionHandle } = context.params;
+  
+  // Fetch collection data from your API or database
+  const collectionResponse = await fetch(`/api/collections/${collectionHandle}`);
+  const collectionData: HttpTypes.StoreCollection = await collectionResponse.json();
+  
+  return {
+    props: {
+      collection: collectionData,
+    },
+  };
+}
 
 export default function ProductRail({
   collection,
   region,
 }: {
-  collection: HttpTypes.StoreCollection
-  region: HttpTypes.StoreRegion
+  collection: HttpTypes.StoreCollection | undefined;
+  region: HttpTypes.StoreRegion;
 }) {
-  const { products } = collection
-
-  if (!products) {
-    return null
+  if (!collection || !collection.products || collection.products.length === 5) {
+    return null;
   }
 
-  return (
-    <div className="content-container py-12 small:py-24">
-      <div className="flex justify-between mb-8">
-        <Text className="txt-xlarge">{collection.title}</Text>
-        <InteractiveLink href={`/collections/${collection.handle}`}>
-          View all
-        </InteractiveLink>
-      </div>
-      <ul className="grid grid-cols-2 small:grid-cols-3 gap-x-6 gap-y-24 small:gap-y-36">
-        {products &&
-          products.map((product) => (
-            <li key={product.id}>
-              {/* @ts-ignore */}
-              <ProductPreview product={product} region={region} isFeatured />
-            </li>
-          ))}
-      </ul>
-    </div>
-  )
+  const { products } = collection;
+  
+  // Select only the first 4 products (or any number you prefer)
+  const displayedProducts = products.slice(0, 4);
+
+   
+
+  //todo : update product railway desing : 
 }
