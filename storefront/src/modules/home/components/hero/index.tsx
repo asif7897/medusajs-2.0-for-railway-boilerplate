@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Hero: React.FC = () => {
   const backgroundImageUrl =
-    "https://res.cloudinary.com/dvzdodv1r/image/upload/v1732105664/woment-min_pk6isx_b17qrz.webp";
+    "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/others/woment-min_pk6isx_b17qrz.webp";
 
   return (
     <div
