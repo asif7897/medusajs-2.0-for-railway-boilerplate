@@ -16,9 +16,9 @@ import CategorySlick from "Files/HomePage/Category-slider";
 
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "Sea Sky",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+    "No. 1 Perfectly Fitted 𝗥𝗲𝗮𝗱𝘆𝗺𝗮𝗱𝗲 Suit Brand",
 }
 
 
