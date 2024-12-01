@@ -20,15 +20,15 @@ const Hero: React.FC = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 h-full w-full flex items-center justify-center">
-        <div className="text-white text-center px-4 md:px-8">
-           
- 
+      <div className="absolute inset-0 h-full w-full bg-black bg-opacity-10 flex items-center justify-end px-4 md:px-8">
+        <div className="text-white text-right">
+         
+          
 
           {/* Shop Now Button */}
           <Link href="/collections/womenSuit">
             <button
-              className="rounded border-2 border-neutral-50 px-7 py-3 text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:outline-none"
+              className="rounded-lg border-2 border-neutral-50 px-6 py-3 text-sm md:text-base font-medium uppercase leading-normal text-neutral-50 transition-transform duration-300 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:outline-none transform hover:scale-105"
             >
               Shop Now
             </button>
