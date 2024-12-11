@@ -1,6 +1,9 @@
 import { Metadata } from "next"
 
 import FeaturedProducts from "@modules/home/components/featured-products"
+
+import Animation from "@modules/layout/templates/animation"
+
 import Hero from "@modules/home/components/hero"
 import { getCollectionsWithProducts } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
@@ -103,7 +106,8 @@ const slides = [
           <FeaturedProducts collections={collections} region={region} />
         </ul>
       </div>
-      <>    <Hero />    
+      <>    <Hero />   
+            
       
        </>
 
@@ -214,7 +218,7 @@ const slides = [
 </section>
 
        
-       
+       <Animation/>
        
        
        </>
