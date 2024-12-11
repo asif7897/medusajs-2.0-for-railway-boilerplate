@@ -103,7 +103,7 @@ const slides = [
           <FeaturedProducts collections={collections} region={region} />
         </ul>
       </div>
-      <>  <Hero />    
+      <>    <Hero />    
       
        </>
 
@@ -152,21 +152,21 @@ const slides = [
           </a>
 
           <a
-            href="/collections/boxTie"
+            href="/collections/moneyBag"
             className="w-full md:w-[calc(50%-8px)] h-full relative flex items-center justify-center overflow-hidden rounded-lg bg-gray-700 group"
-            style={{ backgroundImage: 'url("https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/others/Tie_web_banner_2_1_q1huo5.webp")' }}
+            style={{ backgroundImage: 'url("https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/random/2.1_11zon.webp")' }}
           >
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
               
-              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/others/Tie_web_banner_2_1_q1huo5.webp"
+              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/random/2.1_11zon.webp"
 
 
               alt="Box Tie"
             />
             <img
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 group-hover:opacity-100"
-              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/others/tie_section_ozfo8g.webp"
+              src="https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/random/7.3_11zon.webp"
               alt="Box Tie Hover"
             />
             <svg
