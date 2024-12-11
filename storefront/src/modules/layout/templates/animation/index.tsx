@@ -76,6 +76,27 @@ const Animation = () => {
     width: "100%",
   };
 
+  return (
+    <div style={containerStyle}>
+      {/* Image Section */}
+      <div style={{ ...sectionStyle, ...imageStyle }}></div>
+
+      {/* Content Section */}
+      <div style={{ ...sectionStyle, ...contentStyle }}>
+        <h1 style={{ fontSize: isDesktop ? "50px" : "24px", marginBottom: "10px" }}>
+          Money Bag
+        </h1>
+        <p style={{ fontSize: isDesktop ? "18px" : "16px", color: "#666", marginBottom: "20px" }}>
+          Explore our exclusive collection of Money Bag, perfect for every time.
+        </p>
+        <CustomButton text="MONEY BAG" href="/collections/moneyBag" />
+      </div>
+    </div>
+  );
+};
+
+// Custom Button Component
+const CustomButton = ({ text, href }: { text: string; href: string }) => {
   const buttonStyle: React.CSSProperties = {
     marginTop: "20px",
     padding: "15px 30px",
@@ -87,36 +108,25 @@ const Animation = () => {
     cursor: "pointer",
     textTransform: "uppercase",
     transition: "background-color 0.3s ease, transform 0.3s ease",
+    textDecoration: "none",
+    display: "inline-block",
   };
 
   return (
-    <div style={containerStyle}>
-      {/* Image Section */}
-      <div style={{ ...sectionStyle, ...imageStyle }}></div>
-
-      {/* Content Section */}
-      <div style={{ ...sectionStyle, ...contentStyle }}>
-        <h1 style={{ fontSize: isDesktop ? "50px" : "24px", marginBottom: "10px" }}>
-          Tie Section
-        </h1>
-        <p style={{ fontSize: isDesktop ? "18px" : "16px", color: "#666", marginBottom: "20px" }}>
-          Explore our exclusive collection of ties, perfect for every occasion.
-        </p>
-        <button
-          style={buttonStyle}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = "#555";
-            e.currentTarget.style.transform = "scale(1.05)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "#333";
-            e.currentTarget.style.transform = "scale(1)";
-          }}
-        >
-          Shop Now
-        </button>
-      </div>
-    </div>
+    <a
+      href={href}
+      style={buttonStyle}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = "#555";
+        e.currentTarget.style.transform = "scale(1.05)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundColor = "#333";
+        e.currentTarget.style.transform = "scale(1)";
+      }}
+    >
+      {text}
+    </a>
   );
 };
 
