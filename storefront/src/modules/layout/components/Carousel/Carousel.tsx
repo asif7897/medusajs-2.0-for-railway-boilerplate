@@ -20,6 +20,8 @@ const CustomButton = ({
 }) => {
   return (
     <Link href={href} passHref>
+
+      
       <Button
         style={{
           backgroundColor: 'rgba(255, 255, 255, 0.1)', // Initial transparent white background
@@ -36,6 +38,8 @@ const CustomButton = ({
       >
         {text}
       </Button>
+
+
     </Link>
   );
 };
@@ -51,9 +55,9 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
       
      
      
-      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/3/tie_mobile_zb5mva_oy66id.webp",
-      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/1/for_mobile_nonk1a_kuhlnq.webp",
-      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/2/IMG_1240.jpg_mobile_zzdesy_ob1aee.webp",
+    //  "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/3/tie_mobile_zb5mva_oy66id.webp",
+     "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/1/for_mobile_nonk1a_kuhlnq.webp",
+    //  "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/2/IMG_1240.jpg_mobile_zzdesy_ob1aee.webp",
      
       
        
@@ -62,9 +66,9 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
     : [
 
      
-      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/3/tie_pc_tbfzc4_ft6ajh.webp", 
+   //   "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/3/tie_pc_tbfzc4_ft6ajh.webp", 
       "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/1/_SDP9211-Recovered-Recovered_iti6r8_gvxk2g.webp",
-      "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/2/banner_panjabi_uat6u0_mtwlzc.webp",
+  //    "https://seasky2004.s3.ap-south-1.amazonaws.com/seasky_image/banner_image/2/banner_panjabi_uat6u0_mtwlzc.webp",
       
      
     
@@ -75,8 +79,8 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
 
   useEffect(() => {
     if (auto) {
-      const intervalId = setInterval(goToNext, interval);
-      return () => clearInterval(intervalId);
+     // const intervalId = setInterval(goToNext, interval);
+    //  return () => clearInterval(intervalId);
     }
   }, [currentIndex, auto, interval]);
 
@@ -113,15 +117,15 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
     setCurrentIndex(index);
   };
 
-  const goToPrevious = () => {
-    const newIndex = (currentIndex - 1 + images.length) % images.length;
-    setCurrentIndex(newIndex);
-  };
+  // const goToPrevious = () => {
+  //   const newIndex = (currentIndex - 1 + images.length) % images.length;
+  //   setCurrentIndex(newIndex);
+  // };
 
-  const goToNext = () => {
-    const newIndex = (currentIndex + 1) % images.length;
-    setCurrentIndex(newIndex);
-  };
+  // const goToNext = () => {
+  //   const newIndex = (currentIndex + 1) % images.length;
+  //   setCurrentIndex(newIndex);
+  // };
 
 
 
@@ -171,18 +175,22 @@ const Carousel: React.FC<CarouselProps> = ({ auto = true, interval = 3000 }) => 
           </div>
         ))}
       </div>
-      <button
+      {/* <button
         className={`${styles.carouselButton} ${styles.carouselButtonLeft} ${showButtons ? styles.show : ''}`}
-        onClick={goToPrevious}
+      //  onClick={goToPrevious}
       >
         &#9664;
-      </button>
-      <button
+      </button> */}
+      {/* <button
+
         className={`${styles.carouselButton} ${styles.carouselButtonRight} ${showButtons ? styles.show : ''}`}
-        onClick={goToNext}
+      //  onClick={goToNext}
       >
         &#9654;
-      </button>
+      </button> */}
+
+
+
       <div className={styles.navigationDots}>
         {images.map((_, index) => (
           <button
